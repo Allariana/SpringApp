@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Employee {
@@ -16,6 +17,9 @@ public class Employee {
 	private String lastName;
 	private String firstName;
 	private BigDecimal salary;
+	
+	@ManyToOne
+	private Department department;
 	
 	public Employee() {
 		super();
@@ -46,6 +50,12 @@ public class Employee {
 		this.salary = salary;
 	}
 	
+	public Department getDepartment() {
+		return department;
+	}
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", lastName=" + lastName + ", firstName=" + firstName + ", salary=" + salary + "]";
