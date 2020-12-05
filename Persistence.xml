@@ -1,0 +1,17 @@
+<persistence>  
+<persistence-unit name="Employee_details">  
+<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+     
+      <class>pl.imsi.Employee</class>  
+  
+      <properties>  
+         <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>  
+         <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost;databaseName=my_database"/>  
+         <property name="javax.persistence.jdbc.user" value="sa"/>  
+         <property name="javax.persistence.jdbc.password" value="praktyka"/>  
+         <property name="eclipselink.logging.level" value="SEVERE"/>  
+         <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>  
+      </properties>  
+        
+   </persistence-unit>  
+</persistence>  

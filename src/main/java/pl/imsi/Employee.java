@@ -7,8 +7,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 @Entity
+//@Table(name="Employee")  
+//@NamedQuery(name = "find lastname" , query = "Select e from Employee e where last_name like 'K%'")  
 public class Employee {
 	
 	@Id
