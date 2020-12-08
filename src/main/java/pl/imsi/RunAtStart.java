@@ -73,6 +73,12 @@ public class RunAtStart {
 		department.setJob("Seller");
 		departmentRepository.save(department);
 		
+		Iterable<Employee> piotr = employeeRepository.findByfirstName("Piotr");
+		
+		for(Employee e: piotr) {
+			System.out.println("w bazie danych są:" + e);
+		}
+		
 //		Query query = em.createQuery("Select * from Employee e where last_name like 'K%'");
 //		List<Employee> list = query.getResultList();
 //		//List<Employee> list = null;
